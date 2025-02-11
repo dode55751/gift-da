@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Message</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal">
+        <p id="msg"></p>
+    </div>
+    <script>
+        const secretMessage = "You have unlocked a hidden message: You're special and irreplaceable!";
+        let i = 0;
+        function typeMessage() {
+            if (i < secretMessage.length) {
+                document.getElementById("msg").innerHTML += secretMessage[i];
+                i++;
+                setTimeout(typeMessage, 50);
+            }
+        }
+        typeMessage();
+    </script>
+</body>
+</html>
